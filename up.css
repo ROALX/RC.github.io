@@ -1,3 +1,8 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 .header ul {
     list-style: none;
     padding: 0;
@@ -16,3 +21,68 @@
     border-radius: 5px;
 }
 
+a {
+    text-decoration: none;
+}
+
+.link-without-underline {
+    text-decoration: none;
+}
+
+
+
+/* 长方形容器样式 */
+.rectangle-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #3b3b3b; /* 背景颜色 */
+    width: 400px; /* 宽度 */
+    height: 500px; /* 高度 */
+    overflow: hidden; /* 隐藏溢出内容 */
+    position: relative; /* 让按钮位置相对于容器 */
+}
+
+/* 图片部分样式 */
+.image-section {
+    flex: 3; /* 上下比例，上面占3/5，下面占2/5 */
+    overflow: hidden; /* 隐藏溢出内容 */
+}
+
+.image-section img {
+    width: 100%; /* 图片宽度填充容器 */
+    height: auto; /* 根据宽度调整高度 */
+}
+
+/* 文字部分样式 */
+.text-section {
+    flex: 2; /* 上下比例，上面占3/5，下面占2/5 */
+    padding: 5px; /* 内边距 */
+    text-align: center; /* 文本居中对齐 */
+    position: relative; /* 相对定位 */
+    bottom:0px; /* 将标题向上移动10像素 */
+}
+
+
+.green-button {
+    background-color: #9fc043; 
+    color: #f0f0f0; 
+    border: none; 
+    border-radius: 30px; 
+    padding: 7px 7px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: block; 
+    cursor: pointer; 
+    position: relative;
+    top: 110px;
+}
+
+/* 默认情况下的按钮样式 */
+.rectangle-container .green-button {
+    background-color: #9fc043; /* 绿色 */
+}
+
+/* 鼠标未碰到长方形区块时的按钮样式 */
+.rectangle-container:not(:hover) .green-button {
+    background-color: #808080; /* 灰色 */
+}
