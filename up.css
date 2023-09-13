@@ -1,48 +1,18 @@
-body {
-    background-image: url('LOGO.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    max-width: 1000px;
-    max-height: 1000px;
-}
-
-.header {
-    padding: 20px;
-    text-align: center;
-}
-
-.social ul {
+.header ul {
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: right;
 }
 
-.social ul li {
+.header ul li {
     display: inline-block;
     margin-left: 15px;
 }
 
-.social ul li:first-child {
-    margin-left: 0;
-}
-
-.social ul li a {
+.header ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
     border-radius: 5px;
 }
 
-.menu-switch {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    color: #555;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-p {
-    font: italic bold 20px/1.7 Arial, sans-serif;
-}
