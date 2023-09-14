@@ -24,12 +24,16 @@ function showSlide(index) {
 }
 
 function autoSlide() {
-    slideIndex = (slideIndex + 1) % slides.length;
+    const numSlidesToShow = 3; // 每次滑动三个新闻
+    slideIndex = (slideIndex + numSlidesToShow) % slides.length;
     showSlide(slideIndex);
 }
 
 // 设置定时器来自动播放
 setInterval(autoSlide, 8000); // 8秒切换一次
 
-// 初始显示第一张幻灯片
+// 初始显示第一组幻灯片
 showSlide(slideIndex);
+
+
+
