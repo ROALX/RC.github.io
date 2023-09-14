@@ -1,0 +1,278 @@
+a {
+    text-decoration: none;
+}
+
+.link-without-underline {
+    text-decoration: none;
+}
+
+.header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.header ul li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.rectangle-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #3b3b3b;
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.rectangle-container .green-button {
+    background-color: #9fc043;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 30px;
+    padding: 7px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    top: 110px;
+}
+
+.rectangle-container:not(:hover) .green-button {
+    background-color: #808080;
+}
+
+.image-section {
+    flex: 3;
+    overflow: hidden;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
+.text-section {
+    flex: 2;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+.news-container {
+    text-align: center;
+}
+
+.rectangle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.rectangle-container:not(:last-child) {
+    margin-right: 20px;
+}
+
+.channel-container {
+    text-align: center;
+}
+
+.channel-item {
+    display: inline-block;
+    margin: 0 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.channel-item-content {
+    padding: 10px;
+}
+
+.channel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.channel-item-text {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .social {
+    background-color: #ffffff; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 10px; 
+  }
+  
+  .social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social ul li {
+    display: inline-block;
+    margin-right: 10px; 
+  }
+  
+  .social ul li:last-child {
+    margin-right: 0; 
+  }
+  
+  .social a {
+    text-decoration: none;
+    color: #333; 
+    font-size: 16px; 
+  }
+  
+
+  .social a:hover {
+    color: #007bff;
+  }
+  
+
+  .lg-wrap {
+    display: none;
+  }
+  
+.news-container {
+    text-align: center;
+}
+
+.rectangle-container {
+    display: none;
+}
+
+.rectangle-container.active {
+    display: inline-block;
+}
+
+.carousel-dots {
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #007bff;
+}
+
+.dot.active:hover {
+    background-color: green;
+}
+
+.custom-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    margin: 0;
+}
+
+.footer-right {
+    text-align: right;
+    font-size: 14px;
+}
+
+.footer-right a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+.contact-info {
+    flex: 1;
+    padding-left: 400px; 
+}
+
+.contact-info h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 5px;
+}
+
+.contact-info ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 移除 ABOUT 上面的空白 */
+.banner {
+    display: none; /* 隐藏整个 banner 区域 */
+}
+
+/* 移除 ABOUT 的下方黑條 */
+.head button {
+    border: none; /* 移除下边框 */
+}
+
+/* 调整 ABOUT 区域的位置 */
+.about {
+    margin-top: -50px; /* 通过负边距来移除空白 */
+    padding-top: 0; /* 上边距设置为零 */
+}
