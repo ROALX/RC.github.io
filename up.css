@@ -119,10 +119,10 @@ a {
   }
   
   .social {
-    background-color: #ffffff; /* 设置背景颜色 */
-    border-radius: 5px; /* 设置圆角边框 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 设置阴影 */
-    padding: 10px; /* 设置内边距 */
+    background-color: #ffffff; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 10px; 
   }
   
   .social ul {
@@ -133,32 +133,29 @@ a {
   
   .social ul li {
     display: inline-block;
-    margin-right: 10px; /* 设置间距 */
+    margin-right: 10px; 
   }
   
   .social ul li:last-child {
-    margin-right: 0; /* 移除最后一个元素的右侧间距 */
+    margin-right: 0; 
   }
   
   .social a {
     text-decoration: none;
-    color: #333; /* 设置文本颜色 */
-    font-size: 16px; /* 设置字体大小 */
+    color: #333; 
+    font-size: 16px; 
   }
   
-  /* 根据需要设置鼠标悬停效果 */
+
   .social a:hover {
-    color: #007bff; /* 设置悬停时的文本颜色 */
+    color: #007bff;
   }
   
-  /* 隐藏语言链接 */
+
   .lg-wrap {
     display: none;
   }
   
-
-
-/* styles.css */
 .news-container {
     text-align: center;
 }
@@ -189,12 +186,10 @@ a {
     background-color: #007bff;
 }
 
-/* 当单个点被点击时，变为绿色 */
 .dot.active:hover {
     background-color: green;
 }
 
-/* 样式调整 */
 .custom-footer {
     background-color: #333;
     color: #fff;
@@ -207,7 +202,7 @@ a {
 .footer-content {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* 允许内容换行 */
+    flex-wrap: wrap; 
 }
 
 .footer-left {
@@ -237,10 +232,9 @@ a {
     text-decoration: underline;
 }
 
-/* 新添加的联系信息样式 */
 .contact-info {
     flex: 1;
-    padding-left: 400px; /* 添加左侧间距 */
+    padding-left: 400px; 
 }
 
 .contact-info h4 {
