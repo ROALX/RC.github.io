@@ -1,7 +1,10 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+a {
+    text-decoration: none;
+}
 
+.link-without-underline {
+    text-decoration: none;
+}
 
 .header ul {
     list-style: none;
@@ -21,68 +24,245 @@
     border-radius: 5px;
 }
 
-a {
-    text-decoration: none;
-}
-
-.link-without-underline {
-    text-decoration: none;
-}
-
-
-
-/* 长方形容器样式 */
 .rectangle-container {
     display: flex;
     flex-direction: column;
-    background-color: #3b3b3b; /* 背景颜色 */
-    width: 400px; /* 宽度 */
-    height: 500px; /* 高度 */
-    overflow: hidden; /* 隐藏溢出内容 */
-    position: relative; /* 让按钮位置相对于容器 */
+    border-radius: 10px;
+    background-color: #3b3b3b;
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
 }
 
-/* 图片部分样式 */
-.image-section {
-    flex: 3; /* 上下比例，上面占3/5，下面占2/5 */
-    overflow: hidden; /* 隐藏溢出内容 */
-}
-
-.image-section img {
-    width: 100%; /* 图片宽度填充容器 */
-    height: auto; /* 根据宽度调整高度 */
-}
-
-/* 文字部分样式 */
-.text-section {
-    flex: 2; /* 上下比例，上面占3/5，下面占2/5 */
-    padding: 5px; /* 内边距 */
-    text-align: center; /* 文本居中对齐 */
-    position: relative; /* 相对定位 */
-    bottom:0px; /* 将标题向上移动10像素 */
-}
-
-
-.green-button {
-    background-color: #9fc043; 
-    color: #f0f0f0; 
-    border: none; 
-    border-radius: 30px; 
-    padding: 7px 7px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: block; 
-    cursor: pointer; 
+.rectangle-container .green-button {
+    background-color: #9fc043;
+    color: #f0f0f0;
+    border: none;
+    border-radius: 30px;
+    padding: 7px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
     position: relative;
     top: 110px;
 }
 
-/* 默认情况下的按钮样式 */
-.rectangle-container .green-button {
-    background-color: #9fc043; /* 绿色 */
+.rectangle-container:not(:hover) .green-button {
+    background-color: #808080;
 }
 
-/* 鼠标未碰到长方形区块时的按钮样式 */
-.rectangle-container:not(:hover) .green-button {
-    background-color: #808080; /* 灰色 */
+.image-section {
+    flex: 3;
+    overflow: hidden;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+}
+
+.text-section {
+    flex: 2;
+    padding: 5px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+.news-container {
+    text-align: center;
+}
+
+.rectangle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.rectangle-container:not(:last-child) {
+    margin-right: 20px;
+}
+
+.channel-container {
+    text-align: center;
+}
+
+.channel-item {
+    display: inline-block;
+    margin: 0 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.channel-item-content {
+    padding: 10px;
+}
+
+.channel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.channel-item-text {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.header {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .social {
+    background-color: #ffffff; /* 设置背景颜色 */
+    border-radius: 5px; /* 设置圆角边框 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 设置阴影 */
+    padding: 10px; /* 设置内边距 */
+  }
+  
+  .social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social ul li {
+    display: inline-block;
+    margin-right: 10px; /* 设置间距 */
+  }
+  
+  .social ul li:last-child {
+    margin-right: 0; /* 移除最后一个元素的右侧间距 */
+  }
+  
+  .social a {
+    text-decoration: none;
+    color: #333; /* 设置文本颜色 */
+    font-size: 16px; /* 设置字体大小 */
+  }
+  
+  /* 根据需要设置鼠标悬停效果 */
+  .social a:hover {
+    color: #007bff; /* 设置悬停时的文本颜色 */
+  }
+  
+  /* 隐藏语言链接 */
+  .lg-wrap {
+    display: none;
+  }
+  
+
+
+/* styles.css */
+.news-container {
+    text-align: center;
+}
+
+.rectangle-container {
+    display: none;
+}
+
+.rectangle-container.active {
+    display: inline-block;
+}
+
+.carousel-dots {
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #007bff;
+}
+
+/* 当单个点被点击时，变为绿色 */
+.dot.active:hover {
+    background-color: green;
+}
+
+/* 样式调整 */
+.custom-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* 允许内容换行 */
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-left p {
+    margin: 0;
+}
+
+.footer-right {
+    text-align: right;
+    font-size: 14px;
+}
+
+.footer-right a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+/* 新添加的联系信息样式 */
+.contact-info {
+    flex: 1;
+    padding-left: 400px; /* 添加左侧间距 */
+}
+
+.contact-info h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 5px;
+}
+
+.contact-info ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+    text-decoration: underline;
 }
