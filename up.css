@@ -260,3 +260,19 @@ a {
 .contact-info ul li a:hover {
     text-decoration: underline;
 }
+
+/* 移除 ABOUT 上面的空白 */
+.banner {
+    display: none; /* 隐藏整个 banner 区域 */
+}
+
+/* 移除 ABOUT 的下方黑條 */
+.head button {
+    border: none; /* 移除下边框 */
+}
+
+/* 调整 ABOUT 区域的位置 */
+.about {
+    margin-top: -50px; /* 通过负边距来移除空白 */
+    padding-top: 0; /* 上边距设置为零 */
+}
