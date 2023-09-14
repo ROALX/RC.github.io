@@ -325,3 +325,64 @@ a {
     text-align: center;
 }
 
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .navigation ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .navigation li {
+        margin: 10px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        padding: 0;
+    }
+
+    .header {
+        position: relative;
+        text-align: center;
+    }
+
+    .lg-wrap {
+        display: block;
+    }
+
+    .banner {
+        padding: 10px;
+    }
+
+    .company-name {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .rectangle-container {
+        width: 100%;
+    }
+
+    .text-section {
+        text-align: center;
+    }
+
+    .footer-left {
+        padding: 0;
+        text-align: center;
+    }
+
+    .contact-info {
+        padding-left: 0;
+    }
+}
