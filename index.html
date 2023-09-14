@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="RC Studio, 剪輯師, 工作室, 剪輯">
     <meta name="description" content="用創意打造新媒體高峰，為每位客戶創造獨一無二的影片品質，友善溝通帶來雙方最大利益。">
-    <meta property="og:title" content="RC Studio">
+    <meta property="og:title" content="玫瑰編碼工作室RC Studio">
     <meta property="og:description" content="用創意打造新媒體高峰，為每位客戶創造獨一無二的影片品質，友善溝通帶來雙方最大利益。">
     <title>RC Studio</title>
     <base href="">
@@ -18,6 +18,57 @@
     <link href="LOGO.png" rel="apple-touch-icon">
     <link href="up.css" rel="stylesheet">
     <link href="連結樹.css" rel="stylesheet">
+    <style>
+        /* 你的CSS样式 */
+        .rectangle-container {
+            /* 添加一些间距和边框 */
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            display: inline-block; /* 让它们水平排列 */
+            vertical-align: top; /* 使它们顶部对齐 */
+            text-align: center; /* 文本居中对齐 */
+        }
+
+        /* 添加左滑动效果的CSS类 */
+        .slide-left {
+            animation: slideLeft 0.5s ease-in-out; /* 使用动画效果 */
+        }
+
+        @keyframes slideLeft {
+            from {
+                transform: translateX(100%); /* 从右侧滑入 */
+            }
+            to {
+                transform: translateX(0); /* 滑动到初始位置 */
+            }
+        }
+
+            /* 左滑动效果的CSS类 */
+    .slide-left {
+        animation: slideLeft 0.5s ease-in-out;
+    }
+
+    @keyframes slideLeft {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    /* 左右箭头的样式 */
+    .carousel-arrows {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+
+        
+    </style>
 </head>
 
 <body>
@@ -103,11 +154,12 @@
 
         <!-- 新聞 -->
 
-        <div class="news-container" class=".image-section img ">
+        <div class="news-container">
             <h1 style="color: #000000;"><b>最新消息</b></h1>
             <br>
-            <div class="slider">
-                <!-- 新聞1 -->
+            <!-- 新闻组1 -->
+            <div class="news-group">
+                <!-- 新闻1 -->
                 <div class="rectangle-container">
                     <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
                         <div class="image-section">
@@ -122,8 +174,8 @@
                         </div>
                     </a>
                 </div>
-
-                <!-- 新聞2 -->
+    
+                <!-- 新闻2 -->
                 <div class="rectangle-container">
                     <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
                         <div class="image-section">
@@ -138,8 +190,8 @@
                         </div>
                     </a>
                 </div>
-
-                <!-- 新聞3 -->
+    
+                <!-- 新闻3 -->
                 <div class="rectangle-container">
                     <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
                         <div class="image-section">
@@ -154,7 +206,11 @@
                         </div>
                     </a>
                 </div>
-                <!-- 新聞4 -->
+            </div>
+    
+            <!-- 新闻组2 -->
+            <div class="news-group">
+                <!-- 新闻4 -->
                 <div class="rectangle-container">
                     <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
                         <div class="image-section">
@@ -169,7 +225,8 @@
                         </div>
                     </a>
                 </div>
-                <!-- 新聞5 -->
+    
+                <!-- 新闻5 -->
                 <div class="rectangle-container">
                     <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
                         <div class="image-section">
@@ -184,7 +241,8 @@
                         </div>
                     </a>
                 </div>
-                <!-- 新聞6 -->
+    
+                <!-- 新闻6 -->
                 <div class="rectangle-container">
                     <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
                         <div class="image-section">
@@ -200,20 +258,132 @@
                     </a>
                 </div>
             </div>
+
+            <!-- 新闻组3 -->
+            <div class="news-group">
+                <!-- 新闻7 -->
+                <div class="rectangle-container">
+                    <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
+                        <div class="image-section">
+                            <img src="IMG_20230308_231824.jpg" alt="圖片">
+                        </div>
+                        <div class="text-section">
+                            <h3 style="color: aliceblue;" class="text">【熱門】綸弟說要拳上小妞!</h3>
+                            <h4 style="color: aliceblue;">綸弟覺得實況主都做作 但他自己...</h4>
+                        </div>
+                        <div>
+                            <div class="green-button">READ MORE</div>
+                        </div>
+                    </a>
+                </div>
+    
+                <!-- 新闻8 -->
+                <div class="rectangle-container">
+                    <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
+                        <div class="image-section">
+                            <img src="IMG_20230308_231824.jpg" alt="圖片">
+                        </div>
+                        <div class="text-section">
+                            <h3 style="color: aliceblue;" class="text">【熱門】小妞開了一間老鼠會!?</h3>
+                            <h4 style="color: aliceblue;">小風投稿:我覺得他開得店很快就倒了</h4>
+                        </div>
+                        <div>
+                            <div class="green-button">READ MORE</div>
+                        </div>
+                    </a>
+                </div>
+    
+                <!-- 新闻9 -->
+                <div class="rectangle-container">
+                    <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
+                        <div class="image-section">
+                            <img src="IMG_20230308_231824.jpg" alt="圖片">
+                        </div>
+                        <div class="text-section">
+                            <h3 style="color: aliceblue;" class="text">【熱門】小風沒女友?</h3>
+                            <h4 style="color: aliceblue;">這網頁到底誰寫的啊幹?</h4>
+                        </div>
+                        <div>
+                            <div class="green-button">READ MORE</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <br>
+            <div class="carousel-dots"></div>
         </div>
 
+    
+        <br>
+        <br>
+        <br>
 
+        <script>
+            // 獲取新聞組和輪播點
+            const newsGroups = document.querySelectorAll('.news-group');
+            const carouselDots = document.querySelector('.carousel-dots');
+        
+            // 初始化輪播索引
+            let currentSlide = 0;
+        
+            // 創建輪播點
+            for (let i = 0; i < newsGroups.length; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                dot.addEventListener('click', () => {
+                    showSlide(i);
+                });
+                carouselDots.appendChild(dot);
+            }
 
-        <div class="carousel-dots">
+        
+                    function showSlide(slideIndex) {
+            if (slideIndex < 0 || slideIndex >= newsGroups.length) {
+                return;
+            }
 
-        </div>
-    </div>
-    <script src="輪播.js"></script>
+        
+                // 隱藏所有新聞組
+                newsGroups.forEach((group) => {
+                    group.style.display = 'none';
+                    group.classList.remove('slide-left');
+                });
+        
+                // 顯示指定索引的新聞組
+                newsGroups[slideIndex].style.display = 'block';
+                
+        
+                // 更新輪播點狀態
+                const dots = carouselDots.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    if (index === slideIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');     
+                    }
+                });
+        
+                // 更新當前輪播索引
+                currentSlide = slideIndex;
+            }
+        
+            // 初始化，顯示第一個輪播
+            showSlide(currentSlide);
+        
+            // 自動輪播
+            function autoSlide() {
+                currentSlide = (currentSlide + 1) % newsGroups.length;
+                showSlide(currentSlide);
+            }
+        
+            // 每隔3秒切換一次輪播
+            setInterval(autoSlide, 10000);
 
-    <br>
-    <br>
-    <hr style="color: black;">
-    <br>
+            // 更新当前轮播索引
+            currentSlide = slideIndex;
+        
+        </script>
+
     </div>
 
 
@@ -302,9 +472,9 @@
         <div class="contact-info">
             <h4>聯絡我們</h4>
             <ul>
-                <li><a href="https://www.youtube.com">Youtube</a></li>
+                <li><a href="https://www.youtube.com/channel/UC7LCarmZGD4sIP_7JTOtuCQ">Youtube</a></li>
                 <li><a href="https://www.twitch.com">Twitch</a></li>
-                <li><a href="https://www.facebook.com">Facebook</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100076907186231">Facebook</a></li>
                 <li><a href="https://www.instagram.com">Instagram</a></li>
                 <li><a href="https://www.discord.com">Discord</a></li>
                 <li>
