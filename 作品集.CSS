@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+hr {
+    border: 1px solid #ccc;
+}
+
+div {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+iframe {
+    width: 320px; /* 设置宽度为 640px，16:9 比例的一半 */
+    height: 180px; /* 设置高度为 360px，16:9 比例的一半 */
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    font-style: italic;
+}
