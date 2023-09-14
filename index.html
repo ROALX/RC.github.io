@@ -19,55 +19,31 @@
     <link href="up.css" rel="stylesheet">
     <link href="連結樹.css" rel="stylesheet">
     <style>
-        /* 你的CSS样式 */
         .rectangle-container {
-            /* 添加一些间距和边框 */
+            /* 添加一些間距和邊框 */
             border: 1px solid #ccc;
             box-sizing: border-box;
-            display: inline-block; /* 让它们水平排列 */
-            vertical-align: top; /* 使它们顶部对齐 */
-            text-align: center; /* 文本居中对齐 */
+            display: inline-block;
+            /* 讓它們水平排列 */
+            vertical-align: top;
+            /* 使它們頂部對齊 */
+            text-align: center;
+            /* 文本居中對齊 */
+            margin: 5px;
+            /* 添加外邊距，可以根據需要調整間距大小 */
         }
 
-        /* 添加左滑动效果的CSS类 */
-        .slide-left {
-            animation: slideLeft 0.5s ease-in-out; /* 使用动画效果 */
-        }
-
-        @keyframes slideLeft {
-            from {
-                transform: translateX(100%); /* 从右侧滑入 */
+        /* 媒體查詢，當螢幕寬度小於某個值時應用不同的樣式 */
+        @media screen and (max-width: 768px) {
+            .rectangle-container {
+                width: 100%;
+                /* 在手機上，將新聞元素寬度設為100% */
+                margin: 10px 0;
+                /* 在手機上，增加垂直間距 */
+                display: block;
+                /* 在手機上，讓新聞元素堆疊 */
             }
-            to {
-                transform: translateX(0); /* 滑动到初始位置 */
-            }
         }
-
-            /* 左滑动效果的CSS类 */
-    .slide-left {
-        animation: slideLeft 0.5s ease-in-out;
-    }
-
-    @keyframes slideLeft {
-        from {
-            transform: translateX(100%);
-        }
-        to {
-            transform: translateX(0);
-        }
-    }
-
-    /* 左右箭头的样式 */
-    .carousel-arrows {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 10px;
-    }
-
-
-        
     </style>
 </head>
 
@@ -174,7 +150,7 @@
                         </div>
                     </a>
                 </div>
-    
+
                 <!-- 新闻2 -->
                 <div class="rectangle-container">
                     <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
@@ -190,7 +166,7 @@
                         </div>
                     </a>
                 </div>
-    
+
                 <!-- 新闻3 -->
                 <div class="rectangle-container">
                     <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
@@ -207,7 +183,7 @@
                     </a>
                 </div>
             </div>
-    
+
             <!-- 新闻组2 -->
             <div class="news-group">
                 <!-- 新闻4 -->
@@ -225,7 +201,7 @@
                         </div>
                     </a>
                 </div>
-    
+
                 <!-- 新闻5 -->
                 <div class="rectangle-container">
                     <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
@@ -241,7 +217,7 @@
                         </div>
                     </a>
                 </div>
-    
+
                 <!-- 新闻6 -->
                 <div class="rectangle-container">
                     <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
@@ -276,7 +252,7 @@
                         </div>
                     </a>
                 </div>
-    
+
                 <!-- 新闻8 -->
                 <div class="rectangle-container">
                     <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
@@ -292,7 +268,7 @@
                         </div>
                     </a>
                 </div>
-    
+
                 <!-- 新闻9 -->
                 <div class="rectangle-container">
                     <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
@@ -313,7 +289,7 @@
             <div class="carousel-dots"></div>
         </div>
 
-    
+
         <br>
         <br>
         <br>
@@ -322,10 +298,10 @@
             // 獲取新聞組和輪播點
             const newsGroups = document.querySelectorAll('.news-group');
             const carouselDots = document.querySelector('.carousel-dots');
-        
+
             // 初始化輪播索引
             let currentSlide = 0;
-        
+
             // 創建輪播點
             for (let i = 0; i < newsGroups.length; i++) {
                 const dot = document.createElement('span');
@@ -336,52 +312,52 @@
                 carouselDots.appendChild(dot);
             }
 
-        
-                    function showSlide(slideIndex) {
-            if (slideIndex < 0 || slideIndex >= newsGroups.length) {
-                return;
-            }
 
-        
+            function showSlide(slideIndex) {
+                if (slideIndex < 0 || slideIndex >= newsGroups.length) {
+                    return;
+                }
+
+
                 // 隱藏所有新聞組
                 newsGroups.forEach((group) => {
                     group.style.display = 'none';
                     group.classList.remove('slide-left');
                 });
-        
+
                 // 顯示指定索引的新聞組
                 newsGroups[slideIndex].style.display = 'block';
-                
-        
+
+
                 // 更新輪播點狀態
                 const dots = carouselDots.querySelectorAll('.dot');
                 dots.forEach((dot, index) => {
                     if (index === slideIndex) {
                         dot.classList.add('active');
                     } else {
-                        dot.classList.remove('active');     
+                        dot.classList.remove('active');
                     }
                 });
-        
+
                 // 更新當前輪播索引
                 currentSlide = slideIndex;
             }
-        
+
             // 初始化，顯示第一個輪播
             showSlide(currentSlide);
-        
+
             // 自動輪播
             function autoSlide() {
                 currentSlide = (currentSlide + 1) % newsGroups.length;
                 showSlide(currentSlide);
             }
-        
+
             // 每隔3秒切換一次輪播
             setInterval(autoSlide, 10000);
 
             // 更新当前轮播索引
             currentSlide = slideIndex;
-        
+
         </script>
 
     </div>
