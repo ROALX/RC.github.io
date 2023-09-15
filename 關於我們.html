@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻轮播</title>
+    <link href="up.css" rel="stylesheet">
+    <style>
+        /* 你的CSS样式 */
+        .rectangle-container {
+            /* 添加一些间距和边框 */
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            display: inline-block; /* 让它们水平排列 */
+            vertical-align: top; /* 使它们顶部对齐 */
+            text-align: center; /* 文本居中对齐 */
+        }
+    </style>
+</head>
+<body>
+    <div class="news-container">
+        <h1 style="color: #000000;"><b>最新消息</b></h1>
+        <br>
+        <!-- 新闻组1 -->
+        <div class="news-group">
+            <!-- 新闻1 -->
+            <div class="rectangle-container">
+                <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
+                    <div class="image-section">
+                        <img src="IMG_20230308_231824.jpg" alt="圖片">
+                    </div>
+                    <div class="text-section">
+                        <h3 style="color: aliceblue;" class="text">【勁爆】因綸弟接手所以倒了！</h3>
+                        <h4 style="color: aliceblue;">真的是太慘了!</h4>
+                    </div>
+                    <div>
+                        <div class="green-button">READ MORE</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 新闻2 -->
+            <div class="rectangle-container">
+                <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
+                    <div class="image-section">
+                        <img src="IMG_20230308_231824.jpg" alt="圖片">
+                    </div>
+                    <div class="text-section">
+                        <h3 style="color: aliceblue;" class="text">【勁爆】RC Studio由綸弟接手</h3>
+                        <h4 style="color: aliceblue;">真的是太酷了!</h4>
+                    </div>
+                    <div>
+                        <div class="green-button">READ MORE</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 新闻3 -->
+            <div class="rectangle-container">
+                <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
+                    <div class="image-section">
+                        <img src="IMG_20230308_231824.jpg" alt="圖片">
+                    </div>
+                    <div class="text-section">
+                        <h3 style="color: aliceblue;" class="text">【勁爆】因綸弟接手所以倒了</h3>
+                        <h4 style="color: aliceblue;">真的不意外!</h4>
+                    </div>
+                    <div>
+                        <div class="green-button">READ MORE</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 新闻组2 -->
+        <div class="news-group">
+            <!-- 新闻4 -->
+            <div class="rectangle-container">
+                <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
+                    <div class="image-section">
+                        <img src="IMG_20230308_231824.jpg" alt="圖片">
+                    </div>
+                    <div class="text-section">
+                        <h3 style="color: aliceblue;" class="text">【熱門】綸弟是同性戀!?</h3>
+                        <h4 style="color: aliceblue;">對齁 不意外!</h4>
+                    </div>
+                    <div>
+                        <div class="green-button">READ MORE</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 新闻5 -->
+            <div class="rectangle-container">
+                <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
+                    <div class="image-section">
+                        <img src="IMG_20230308_231824.jpg" alt="圖片">
+                    </div>
+                    <div class="text-section">
+                        <h3 style="color: aliceblue;" class="text">【熱門】綸弟第二次被送性平</h3>
+                        <h4 style="color: aliceblue;">為什麼都是一些不太驚訝的事</h4>
+                    </div>
+                    <div>
+                        <div class="green-button">READ MORE</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 新闻6 -->
+            <div class="rectangle-container">
+                <a href="https://www.youtube.com" target="_blank" class="link-without-underline">
+                    <div class="image-section">
+                        <img src="IMG_20230308_231824.jpg" alt="圖片">
+                    </div>
+                    <div class="text-section">
+                        <h3 style="color: aliceblue;" class="text">【熱門】小風沒女友?</h3>
+                        <h4 style="color: aliceblue;">這網頁到底誰寫的啊幹?</h4>
+                    </div>
+                    <div>
+                        <div class="green-button">READ MORE</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="carousel-dots"></div>
+    </div>
+
+    <br>
+
+
+    
+    <br>
+    <br>
+    <br>
+
+    <script>
+        // 獲取新聞組和輪播點
+        const newsGroups = document.querySelectorAll('.news-group');
+        const carouselDots = document.querySelector('.carousel-dots');
+    
+        // 初始化輪播索引
+        let currentSlide = 0;
+    
+        // 創建輪播點
+        for (let i = 0; i < newsGroups.length; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            dot.addEventListener('click', () => {
+                showSlide(i);
+            });
+            carouselDots.appendChild(dot);
+        }
+    
+        // 顯示指定索引的輪播
+        function showSlide(slideIndex) {
+            if (slideIndex < 0 || slideIndex >= newsGroups.length) {
+                return;
+            }
+    
+            // 隱藏所有新聞組
+            newsGroups.forEach((group) => {
+                group.style.display = 'none';
+            });
+    
+            // 顯示指定索引的新聞組
+            newsGroups[slideIndex].style.display = 'block';
+    
+            // 更新輪播點狀態
+            const dots = carouselDots.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                if (index === slideIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+    
+            // 更新當前輪播索引
+            currentSlide = slideIndex;
+        }
+    
+        // 初始化，顯示第一個輪播
+        showSlide(currentSlide);
+    
+        // 自動輪播
+        function autoSlide() {
+            currentSlide = (currentSlide + 1) % newsGroups.length;
+            showSlide(currentSlide);
+        }
+    
+        // 每隔3秒切換一次輪播
+        setInterval(autoSlide, 3000);
+    </script>
+</body>
+</html>
