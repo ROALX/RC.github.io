@@ -1,3 +1,4 @@
+
 a {
     text-decoration: none;
 }
@@ -411,9 +412,43 @@ a {
     }
 
 
-        body {
-            background-color: #f5f5f5; /* 設置米白色背景 */
-            background-attachment: fixed; /* 固定背景圖片，不隨滾動而移動 */
+
+    a {
+        text-decoration: none;
+    }
+
+    /* 更改链接文本的颜色 */
+    a {
+        color: #ffffff; /* 可以根据您的设计选择颜色 */
+    }
+
+    /* 修复 RC Studio 文字的垂直位置 */
+    .company-name {
+        vertical-align: middle;
+    }
+
+    .rectangle-container {
+        /* 添加一些間距和邊框 */
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        display: inline-block;
+        /* 讓它們水平排列 */
+        vertical-align: top;
+        /* 使它們頂部對齊 */
+        text-align: center;
+        /* 文本居中對齊 */
+        margin: 5px;
+        /* 添加外邊距，可以根據需要調整間距大小 */
+    }
+
+    /* 媒體查詢，當螢幕寬度小於某個值時應用不同的樣式 */
+    @media screen and (max-width: 768px) {
+        .rectangle-container {
+            width: 100%;
+            /* 在手機上，將新聞元素寬度設為100% */
+            margin: 10px 0;
+            /* 在手機上，增加垂直間距 */
+            display: block;
+            /* 在手機上，讓新聞元素堆疊 */
         }
-
-
+    }
