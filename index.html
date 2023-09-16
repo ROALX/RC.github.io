@@ -12,37 +12,17 @@
     <meta property="og:title" content="玫瑰編碼工作室RC Studio">
     <meta property="og:description" content="用創意打造新媒體高峰，為每位客戶創造獨一無二的影片品質，友善溝通帶來雙方最大利益。">
     <title>RC Studio</title>
-    <base href="">
-    <link href="" rel="icon">
     <link href="LOGO.png" rel="shortcut icon">
     <link href="LOGO.png" rel="apple-touch-icon">
     <link href="up.css" rel="stylesheet">
     <link href="連結樹.css" rel="stylesheet">
     <style>
-        .rectangle-container {
-            /* 添加一些間距和邊框 */
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-            display: inline-block;
-            /* 讓它們水平排列 */
-            vertical-align: top;
-            /* 使它們頂部對齊 */
-            text-align: center;
-            /* 文本居中對齊 */
-            margin: px;
-            /* 添加外邊距，可以根據需要調整間距大小 */
-        }
-
-        /* 媒體查詢，當螢幕寬度小於某個值時應用不同的樣式 */
-        @media screen and (max-width: 768px) {
-            .rectangle-container {
-                width: 100%;
-                /* 在手機上，將新聞元素寬度設為100% */
-                margin: 10px 0;
-                /* 在手機上，增加垂直間距 */
-                display: block;
-                /* 在手機上，讓新聞元素堆疊 */
-            }
+            body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff
         }
     </style>
 </head>
@@ -51,9 +31,12 @@
 
     <header class="banner">
         <div class="logo">
-            <img src="LOGO.jpg" alt="LOGO">
-            <span class="company-name" wit>RC Studio</span>
+            <a href="index.html">
+                <img src="LOGO.jpg" alt="LOGO">
+                <span class="company-name">RC Studio</span>
+            </a>
         </div>
+        
 
         <nav class="navigation">
             <ul>
@@ -125,9 +108,8 @@
         </article>
 
         <br>
-        <hr>
         <br>
-
+        <br>
         <!-- 新聞 -->
 
         <div class="news-container">
@@ -353,7 +335,7 @@
             }
 
             // 每隔3秒切換一次輪播
-            setInterval(autoSlide, 10000);
+            setInterval(autoSlide, 15000);
 
             // 更新当前轮播索引
             currentSlide = slideIndex;
