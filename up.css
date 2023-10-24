@@ -89,8 +89,8 @@ a {
 .channel-item {
     display: inline-block;
     margin: 0 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
+    background-color: #3b3b3b;
+    border: 1px solid #3b3b3b;
     border-radius: 5px;
 }
 
@@ -106,6 +106,7 @@ a {
 .channel-item-text {
     margin-top: 10px;
     font-weight: bold;
+    color: #ffffff ;
 }
 
 
@@ -120,6 +121,9 @@ a {
     display: inline-block; 
     margin: 0 10px; 
 }
+/*旗下頻道尾*/
+
+
 
 .header {
     position: absolute;
@@ -441,14 +445,11 @@ a {
         /* 添加外邊距，可以根據需要調整間距大小 */
     }
 
-    /* 媒體查詢，當螢幕寬度小於某個值時應用不同的樣式 */
-    @media screen and (max-width: 768px) {
-        .rectangle-container {
-            width: 100%;
-            /* 在手機上，將新聞元素寬度設為100% */
-            margin: 10px 0;
-            /* 在手機上，增加垂直間距 */
+    @media screen and (max-width: 600px) {
+        .news-group {
+            display: none;
+        }
+        .news-group:first-child {
             display: block;
-            /* 在手機上，讓新聞元素堆疊 */
         }
     }
